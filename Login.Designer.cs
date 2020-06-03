@@ -60,8 +60,10 @@
             this.Password.Location = new System.Drawing.Point(306, 170);
             this.Password.MaxLength = 20;
             this.Password.Name = "Password";
+            this.Password.PasswordChar = '*';
             this.Password.Size = new System.Drawing.Size(100, 20);
             this.Password.TabIndex = 2;
+            this.Password.UseSystemPasswordChar = true;
             // 
             // label2
             // 

@@ -31,20 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Caja));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.buttonEspañola = new System.Windows.Forms.RadioButton();
+            this.buttonHawaiiana = new System.Windows.Forms.RadioButton();
+            this.buttonItaliana = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.buttonXL = new System.Windows.Forms.RadioButton();
+            this.buttonFamiliar = new System.Windows.Forms.RadioButton();
+            this.buttonMediana = new System.Windows.Forms.RadioButton();
+            this.buttonIndividual = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonPA = new System.Windows.Forms.RadioButton();
+            this.buttonPapas = new System.Windows.Forms.RadioButton();
+            this.buttonBebida = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.ListaPedidos = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -62,10 +64,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.buttonEspañola);
+            this.groupBox1.Controls.Add(this.buttonHawaiiana);
+            this.groupBox1.Controls.Add(this.buttonItaliana);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(127, 89);
             this.groupBox1.Name = "groupBox1";
@@ -74,56 +75,45 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo de pizza";
             // 
-            // radioButton1
+            // buttonEspañola
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 22);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(69, 20);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Italiana";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.buttonEspañola.AutoSize = true;
+            this.buttonEspañola.Location = new System.Drawing.Point(7, 76);
+            this.buttonEspañola.Name = "buttonEspañola";
+            this.buttonEspañola.Size = new System.Drawing.Size(84, 20);
+            this.buttonEspañola.TabIndex = 2;
+            this.buttonEspañola.TabStop = true;
+            this.buttonEspañola.Text = "Española";
+            this.buttonEspañola.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // buttonHawaiiana
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(7, 49);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(90, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Hawaiiana";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.buttonHawaiiana.AutoSize = true;
+            this.buttonHawaiiana.Location = new System.Drawing.Point(7, 49);
+            this.buttonHawaiiana.Name = "buttonHawaiiana";
+            this.buttonHawaiiana.Size = new System.Drawing.Size(90, 20);
+            this.buttonHawaiiana.TabIndex = 1;
+            this.buttonHawaiiana.TabStop = true;
+            this.buttonHawaiiana.Text = "Hawaiiana";
+            this.buttonHawaiiana.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // buttonItaliana
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(7, 76);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(84, 20);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Española";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(7, 103);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(101, 20);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.buttonItaliana.AutoSize = true;
+            this.buttonItaliana.Location = new System.Drawing.Point(7, 22);
+            this.buttonItaliana.Name = "buttonItaliana";
+            this.buttonItaliana.Size = new System.Drawing.Size(69, 20);
+            this.buttonItaliana.TabIndex = 0;
+            this.buttonItaliana.TabStop = true;
+            this.buttonItaliana.Text = "Italiana";
+            this.buttonItaliana.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton8);
-            this.groupBox2.Controls.Add(this.radioButton7);
-            this.groupBox2.Controls.Add(this.radioButton6);
-            this.groupBox2.Controls.Add(this.radioButton5);
+            this.groupBox2.Controls.Add(this.buttonXL);
+            this.groupBox2.Controls.Add(this.buttonFamiliar);
+            this.groupBox2.Controls.Add(this.buttonMediana);
+            this.groupBox2.Controls.Add(this.buttonIndividual);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(326, 89);
             this.groupBox2.Name = "groupBox2";
@@ -132,11 +122,55 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tamaño pizza";
             // 
+            // buttonXL
+            // 
+            this.buttonXL.AutoSize = true;
+            this.buttonXL.Location = new System.Drawing.Point(7, 92);
+            this.buttonXL.Name = "buttonXL";
+            this.buttonXL.Size = new System.Drawing.Size(41, 20);
+            this.buttonXL.TabIndex = 3;
+            this.buttonXL.TabStop = true;
+            this.buttonXL.Text = "XL";
+            this.buttonXL.UseVisualStyleBackColor = true;
+            // 
+            // buttonFamiliar
+            // 
+            this.buttonFamiliar.AutoSize = true;
+            this.buttonFamiliar.Location = new System.Drawing.Point(7, 68);
+            this.buttonFamiliar.Name = "buttonFamiliar";
+            this.buttonFamiliar.Size = new System.Drawing.Size(74, 20);
+            this.buttonFamiliar.TabIndex = 2;
+            this.buttonFamiliar.TabStop = true;
+            this.buttonFamiliar.Text = "Familiar";
+            this.buttonFamiliar.UseVisualStyleBackColor = true;
+            // 
+            // buttonMediana
+            // 
+            this.buttonMediana.AutoSize = true;
+            this.buttonMediana.Location = new System.Drawing.Point(7, 44);
+            this.buttonMediana.Name = "buttonMediana";
+            this.buttonMediana.Size = new System.Drawing.Size(79, 20);
+            this.buttonMediana.TabIndex = 1;
+            this.buttonMediana.TabStop = true;
+            this.buttonMediana.Text = "Mediana";
+            this.buttonMediana.UseVisualStyleBackColor = true;
+            // 
+            // buttonIndividual
+            // 
+            this.buttonIndividual.AutoSize = true;
+            this.buttonIndividual.Location = new System.Drawing.Point(7, 20);
+            this.buttonIndividual.Name = "buttonIndividual";
+            this.buttonIndividual.Size = new System.Drawing.Size(83, 20);
+            this.buttonIndividual.TabIndex = 0;
+            this.buttonIndividual.TabStop = true;
+            this.buttonIndividual.Text = "Individual";
+            this.buttonIndividual.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton11);
-            this.groupBox3.Controls.Add(this.radioButton10);
-            this.groupBox3.Controls.Add(this.radioButton9);
+            this.groupBox3.Controls.Add(this.buttonPA);
+            this.groupBox3.Controls.Add(this.buttonPapas);
+            this.groupBox3.Controls.Add(this.buttonBebida);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(527, 89);
             this.groupBox3.Name = "groupBox3";
@@ -145,89 +179,76 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agregado";
             // 
-            // radioButton5
+            // buttonPA
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(7, 20);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(124, 20);
-            this.radioButton5.TabIndex = 0;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Individual $4.600";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.buttonPA.AutoSize = true;
+            this.buttonPA.Location = new System.Drawing.Point(7, 68);
+            this.buttonPA.Name = "buttonPA";
+            this.buttonPA.Size = new System.Drawing.Size(108, 20);
+            this.buttonPA.TabIndex = 2;
+            this.buttonPA.TabStop = true;
+            this.buttonPA.Text = "Palitos de ajo";
+            this.buttonPA.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // buttonPapas
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(7, 44);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(120, 20);
-            this.radioButton6.TabIndex = 1;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Mediana $7.850";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.buttonPapas.AutoSize = true;
+            this.buttonPapas.Location = new System.Drawing.Point(7, 44);
+            this.buttonPapas.Name = "buttonPapas";
+            this.buttonPapas.Size = new System.Drawing.Size(66, 20);
+            this.buttonPapas.TabIndex = 1;
+            this.buttonPapas.TabStop = true;
+            this.buttonPapas.Text = "Papas";
+            this.buttonPapas.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // buttonBebida
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(7, 68);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(122, 20);
-            this.radioButton7.TabIndex = 2;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Familiar $10.750";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.buttonBebida.AutoSize = true;
+            this.buttonBebida.Location = new System.Drawing.Point(7, 20);
+            this.buttonBebida.Name = "buttonBebida";
+            this.buttonBebida.Size = new System.Drawing.Size(70, 20);
+            this.buttonBebida.TabIndex = 0;
+            this.buttonBebida.TabStop = true;
+            this.buttonBebida.Text = "Bebida";
+            this.buttonBebida.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // label2
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(7, 92);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(89, 20);
-            this.radioButton8.TabIndex = 3;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "XL $15.400";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(527, 300);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 16);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Total:";
             // 
-            // radioButton9
+            // button1
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(7, 20);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(70, 20);
-            this.radioButton9.TabIndex = 0;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Bebida";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(527, 245);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Calcular total";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // radioButton10
+            // label13
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(7, 44);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(66, 20);
-            this.radioButton10.TabIndex = 1;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Papas";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(576, 300);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(15, 16);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "0";
             // 
-            // radioButton11
+            // ListaPedidos
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(7, 68);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(108, 20);
-            this.radioButton11.TabIndex = 2;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "Palitos de ajo";
-            this.radioButton11.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(127, 253);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.ListaPedidos.FormattingEnabled = true;
+            this.ListaPedidos.Location = new System.Drawing.Point(127, 245);
+            this.ListaPedidos.Name = "ListaPedidos";
+            this.ListaPedidos.Size = new System.Drawing.Size(120, 95);
+            this.ListaPedidos.TabIndex = 9;
             // 
             // Caja
             // 
@@ -235,7 +256,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ListaPedidos);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -259,19 +283,21 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton buttonEspañola;
+        private System.Windows.Forms.RadioButton buttonHawaiiana;
+        private System.Windows.Forms.RadioButton buttonItaliana;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton buttonXL;
+        private System.Windows.Forms.RadioButton buttonFamiliar;
+        private System.Windows.Forms.RadioButton buttonMediana;
+        private System.Windows.Forms.RadioButton buttonIndividual;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton buttonPA;
+        private System.Windows.Forms.RadioButton buttonPapas;
+        private System.Windows.Forms.RadioButton buttonBebida;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ListBox ListaPedidos;
     }
 }

@@ -25,6 +25,7 @@ namespace PizzaHatApp
                 this.Hide();
                 Caja caja = new Caja();
                 caja.Show();
+                
             }
             else
             {

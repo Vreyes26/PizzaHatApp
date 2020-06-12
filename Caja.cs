@@ -17,48 +17,76 @@ namespace PizzaHatApp
         {
             InitializeComponent();
         }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             double Total = 0;
-            double Cantidad;
-            Array pedidos = new Array[0];
+            string tipoPizza = "";
+            string tipoTamaño = "";
+            string tipoAgregado = "";
+            
 
             if (buttonItaliana.Checked == true)
             {
-                string tipoPizza = "Italiana";
+                tipoPizza = "Italiana ";
                 Total += 650;
             }
             else if (buttonEspañola.Checked == true)
             {
-                string tipoPizza = "Española";
+                tipoPizza = "Española ";
                 Total += 1350;
             }else if(buttonHawaiiana.Checked == true)
             {
-                string tipoPizza = "Hawaiiana";
+                tipoPizza = "Hawaiiana ";
                 Total += 650;
             }
 
             if (buttonIndividual.Checked == true)
             {
-                string tipoTamaño = "Individual";
+                tipoTamaño = "Individual ";
                 Total += 3250;
             }else if(buttonMediana.Checked == true)
             {
-                string tipoTamaño = "Mediana";
+                tipoTamaño = "Mediana ";
                 Total += 5700;
             }else if(buttonFamiliar.Checked == true)
             {
-                string tipoTamaño = "Familiar";
+                tipoTamaño = "Familiar ";
                 Total += 7600;
             }else if(buttonXL.Checked == true)
             {
-                string tipoTamaño = "XL";
+                tipoTamaño = "XL ";
                 Total += 12000;
             }
+            
+            if(buttonBebida.Checked == true)
+            {
+                tipoAgregado += "Bebida ";
+                Total += 500;
+            }else if(buttonPapas.Checked == true)
+            {
+                tipoAgregado += "Papas ";
+                Total += 500;
+            }else if(buttonPA.Checked == true)
+            {
+                tipoAgregado += "Palitos de ajo ";
+                Total += 1000;
+            }
+
+            ListaPedidos.Items.Add(tipoPizza + tipoTamaño +"+ "+ tipoAgregado + "$"+Total);
 
             label13.Text = Total.ToString();
         }
 
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            ListaPedidos.Items.Remove(ListaPedidos.SelectedItem);
+        }
+
+        private void buttonCalcular2_Click(object sender, EventArgs e)
+        {
+            //labelTotalPedido.Text = ListaPedidos.CheckedItems.ToString();
+        }
     }
 }

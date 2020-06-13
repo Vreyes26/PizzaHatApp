@@ -102,7 +102,9 @@ namespace PizzaHatApp
             //labelTotalPedido.Text = ListaPedidos.CheckedItems.ToString();
             int[] arrayTotal = listaTotal.ToArray();
             int totalCuentaP = arrayTotal.Sum();
-            labelTotalPedido.Text = totalCuentaP.ToString();
+            string conv = String.Format("{0:c0}", totalCuentaP);
+            labelTotalPedido.Text = conv;
+            //labelTotalPedido.Text = totalCuentaP.ToString();
         }
 
         private void Caja_FormClosed(object sender, FormClosedEventArgs e)

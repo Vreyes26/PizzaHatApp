@@ -45,6 +45,7 @@
             this.User.Name = "User";
             this.User.Size = new System.Drawing.Size(100, 20);
             this.User.TabIndex = 0;
+            this.User.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.User_KeyPress);
             // 
             // label1
             // 
@@ -64,6 +65,7 @@
             this.Password.Size = new System.Drawing.Size(100, 20);
             this.Password.TabIndex = 2;
             this.Password.UseSystemPasswordChar = true;
+            this.Password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Password_KeyPress);
             // 
             // label2
             // 

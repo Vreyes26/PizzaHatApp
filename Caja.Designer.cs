@@ -298,6 +298,7 @@ namespace PizzaHatApp
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Caja";
             this.Text = "Caja";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Caja_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

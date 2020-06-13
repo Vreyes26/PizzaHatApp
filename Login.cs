@@ -34,5 +34,21 @@ namespace PizzaHatApp
                 MessageBox.Show(messaje, tittle, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void User_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                Password.Focus();
+            }
+        }
+
+        private void Password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                LoginButton.Focus();
+            }
+        }
     }
 }

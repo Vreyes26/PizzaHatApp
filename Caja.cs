@@ -64,19 +64,19 @@ namespace PizzaHatApp
             
             if(buttonBebida.Checked == true)
             {
-                tipoAgregado += "Bebida ";
+                tipoAgregado += "+ Bebida ";
                 Total += 500;
             }else if(buttonPapas.Checked == true)
             {
-                tipoAgregado += "Papas ";
+                tipoAgregado += "+ Papas ";
                 Total += 500;
             }else if(buttonPA.Checked == true)
             {
-                tipoAgregado += "Palitos de ajo ";
+                tipoAgregado += "+ Palitos de ajo ";
                 Total += 1000;
             }
 
-            ListaPedidos.Items.Add(tipoPizza + tipoTamaño +"+ "+ tipoAgregado + "$"+Total);
+            ListaPedidos.Items.Add(tipoPizza + tipoTamaño + tipoAgregado + "$"+Total);
 
             listaTotal.Add(Total);
         }
@@ -110,6 +110,12 @@ namespace PizzaHatApp
         private void Caja_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ListaPedidos.Items.Clear();
+            listaTotal.Clear();
         }
     }
 }

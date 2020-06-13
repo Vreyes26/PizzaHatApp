@@ -79,24 +79,22 @@ namespace PizzaHatApp
             ListaPedidos.Items.Add(tipoPizza + tipoTamaño +"+ "+ tipoAgregado + "$"+Total);
 
             listaTotal.Add(Total);
-            
-            /*else
-            {
-                for(int i = 0; i< arrayTotal.Length; i++)
-                {
-                    arrayTotal[i] = Convert.ToInt32(Total);
-                }
-            }*/
-
-            label13.Text = Total.ToString();
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
             //meter en un for para eliminar de uno en uno
-            int seleccion = Convert.ToInt32(ListaPedidos.SelectedIndex);
-            listaTotal.RemoveAt(seleccion);
-            ListaPedidos.Items.Remove(ListaPedidos.SelectedItem);
+            var count = listaTotal.Count();
+            for (int i = 0; i < count; i++)
+            {
+                if (i == ListaPedidos.SelectedIndex)
+                {
+                    listaTotal.RemoveAt(i);
+                    ListaPedidos.Items.RemoveAt(i);
+                    Console.WriteLine(i);
+                }
+            }
+            
         }
 
         private void buttonCalcular2_Click(object sender, EventArgs e)

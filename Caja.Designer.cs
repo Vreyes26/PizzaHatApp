@@ -47,14 +47,12 @@ namespace PizzaHatApp
             this.buttonPA = new System.Windows.Forms.RadioButton();
             this.buttonPapas = new System.Windows.Forms.RadioButton();
             this.buttonBebida = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.ListaPedidos = new System.Windows.Forms.CheckedListBox();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.labelTotal = new System.Windows.Forms.Label();
             this.labelTotalPedido = new System.Windows.Forms.Label();
             this.buttonCalcular2 = new System.Windows.Forms.Button();
+            this.ListaPedidos = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -220,51 +218,23 @@ namespace PizzaHatApp
             this.buttonBebida.Text = "Bebida";
             this.buttonBebida.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(524, 281);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Total:";
-            // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(527, 245);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 23);
+            this.button1.Size = new System.Drawing.Size(124, 32);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Calcular total";
+            this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(573, 281);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(15, 16);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "0";
-            // 
-            // ListaPedidos
-            // 
-            this.ListaPedidos.CheckOnClick = true;
-            this.ListaPedidos.FormattingEnabled = true;
-            this.ListaPedidos.Location = new System.Drawing.Point(127, 245);
-            this.ListaPedidos.Name = "ListaPedidos";
-            this.ListaPedidos.Size = new System.Drawing.Size(295, 124);
-            this.ListaPedidos.TabIndex = 10;
             // 
             // buttonEliminar
             // 
             this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEliminar.Location = new System.Drawing.Point(127, 376);
             this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(75, 23);
+            this.buttonEliminar.Size = new System.Drawing.Size(75, 32);
             this.buttonEliminar.TabIndex = 11;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
@@ -295,11 +265,19 @@ namespace PizzaHatApp
             this.buttonCalcular2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCalcular2.Location = new System.Drawing.Point(282, 376);
             this.buttonCalcular2.Name = "buttonCalcular2";
-            this.buttonCalcular2.Size = new System.Drawing.Size(77, 23);
+            this.buttonCalcular2.Size = new System.Drawing.Size(77, 32);
             this.buttonCalcular2.TabIndex = 14;
             this.buttonCalcular2.Text = "Calcular";
             this.buttonCalcular2.UseVisualStyleBackColor = true;
             this.buttonCalcular2.Click += new System.EventHandler(this.buttonCalcular2_Click);
+            // 
+            // ListaPedidos
+            // 
+            this.ListaPedidos.FormattingEnabled = true;
+            this.ListaPedidos.Location = new System.Drawing.Point(127, 245);
+            this.ListaPedidos.Name = "ListaPedidos";
+            this.ListaPedidos.Size = new System.Drawing.Size(333, 121);
+            this.ListaPedidos.TabIndex = 15;
             // 
             // Caja
             // 
@@ -307,14 +285,12 @@ namespace PizzaHatApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ListaPedidos);
             this.Controls.Add(this.buttonCalcular2);
             this.Controls.Add(this.labelTotalPedido);
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.buttonEliminar);
-            this.Controls.Add(this.ListaPedidos);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -349,13 +325,11 @@ namespace PizzaHatApp
         private System.Windows.Forms.RadioButton buttonPA;
         private System.Windows.Forms.RadioButton buttonPapas;
         private System.Windows.Forms.RadioButton buttonBebida;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label13;
-        private CheckedListBox ListaPedidos;
         private Button buttonEliminar;
         private Label labelTotal;
         private Label labelTotalPedido;
         private Button buttonCalcular2;
+        private ListBox ListaPedidos;
     }
 }

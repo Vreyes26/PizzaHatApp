@@ -252,6 +252,7 @@ namespace PizzaHatApp
             // 
             // ListaPedidos
             // 
+            this.ListaPedidos.CheckOnClick = true;
             this.ListaPedidos.FormattingEnabled = true;
             this.ListaPedidos.Location = new System.Drawing.Point(127, 245);
             this.ListaPedidos.Name = "ListaPedidos";

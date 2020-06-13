@@ -13,6 +13,8 @@ namespace PizzaHatApp
 {
     public partial class Caja : Form
     {
+
+        List<int> listaTotal = new List<int>();
         public Caja()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace PizzaHatApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double Total = 0;
+            int Total = 0;
             string tipoPizza = "";
             string tipoTamaño = "";
             string tipoAgregado = "";
@@ -76,17 +78,33 @@ namespace PizzaHatApp
 
             ListaPedidos.Items.Add(tipoPizza + tipoTamaño +"+ "+ tipoAgregado + "$"+Total);
 
+            listaTotal.Add(Total);
+            
+            /*else
+            {
+                for(int i = 0; i< arrayTotal.Length; i++)
+                {
+                    arrayTotal[i] = Convert.ToInt32(Total);
+                }
+            }*/
+
             label13.Text = Total.ToString();
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
+            //meter en un for para eliminar de uno en uno
+            int seleccion = Convert.ToInt32(ListaPedidos.SelectedIndex);
+            listaTotal.RemoveAt(seleccion);
             ListaPedidos.Items.Remove(ListaPedidos.SelectedItem);
         }
 
         private void buttonCalcular2_Click(object sender, EventArgs e)
         {
             //labelTotalPedido.Text = ListaPedidos.CheckedItems.ToString();
+            int[] arrayTotal = listaTotal.ToArray();
+            int totalCuentaP = arrayTotal.Sum();
+            labelTotalPedido.Text = totalCuentaP.ToString();
         }
     }
 }

@@ -44,6 +44,7 @@ namespace PizzaHatApp
             this.buttonMediana = new System.Windows.Forms.RadioButton();
             this.buttonIndividual = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radioButtonNull = new System.Windows.Forms.RadioButton();
             this.buttonPA = new System.Windows.Forms.RadioButton();
             this.buttonPapas = new System.Windows.Forms.RadioButton();
             this.buttonBebida = new System.Windows.Forms.RadioButton();
@@ -78,7 +79,7 @@ namespace PizzaHatApp
             this.groupBox1.Location = new System.Drawing.Point(127, 89);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(133, 132);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo de pizza";
             // 
@@ -107,6 +108,7 @@ namespace PizzaHatApp
             // buttonItaliana
             // 
             this.buttonItaliana.AutoSize = true;
+            this.buttonItaliana.Checked = true;
             this.buttonItaliana.Location = new System.Drawing.Point(7, 22);
             this.buttonItaliana.Name = "buttonItaliana";
             this.buttonItaliana.Size = new System.Drawing.Size(69, 20);
@@ -125,7 +127,7 @@ namespace PizzaHatApp
             this.groupBox2.Location = new System.Drawing.Point(326, 89);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(134, 132);
-            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tamaño pizza";
             // 
@@ -162,15 +164,18 @@ namespace PizzaHatApp
             // buttonIndividual
             // 
             this.buttonIndividual.AutoSize = true;
+            this.buttonIndividual.Checked = true;
             this.buttonIndividual.Location = new System.Drawing.Point(7, 20);
             this.buttonIndividual.Name = "buttonIndividual";
             this.buttonIndividual.Size = new System.Drawing.Size(83, 20);
             this.buttonIndividual.TabIndex = 0;
+            this.buttonIndividual.TabStop = true;
             this.buttonIndividual.Text = "Individual";
             this.buttonIndividual.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.radioButtonNull);
             this.groupBox3.Controls.Add(this.buttonPA);
             this.groupBox3.Controls.Add(this.buttonPapas);
             this.groupBox3.Controls.Add(this.buttonBebida);
@@ -178,14 +183,25 @@ namespace PizzaHatApp
             this.groupBox3.Location = new System.Drawing.Point(527, 89);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(124, 132);
-            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Agregado";
+            // 
+            // radioButtonNull
+            // 
+            this.radioButtonNull.AutoSize = true;
+            this.radioButtonNull.Location = new System.Drawing.Point(7, 20);
+            this.radioButtonNull.Name = "radioButtonNull";
+            this.radioButtonNull.Size = new System.Drawing.Size(108, 20);
+            this.radioButtonNull.TabIndex = 3;
+            this.radioButtonNull.TabStop = true;
+            this.radioButtonNull.Text = "Sin agregado";
+            this.radioButtonNull.UseVisualStyleBackColor = true;
             // 
             // buttonPA
             // 
             this.buttonPA.AutoSize = true;
-            this.buttonPA.Location = new System.Drawing.Point(7, 68);
+            this.buttonPA.Location = new System.Drawing.Point(7, 92);
             this.buttonPA.Name = "buttonPA";
             this.buttonPA.Size = new System.Drawing.Size(108, 20);
             this.buttonPA.TabIndex = 2;
@@ -196,7 +212,7 @@ namespace PizzaHatApp
             // buttonPapas
             // 
             this.buttonPapas.AutoSize = true;
-            this.buttonPapas.Location = new System.Drawing.Point(7, 44);
+            this.buttonPapas.Location = new System.Drawing.Point(7, 68);
             this.buttonPapas.Name = "buttonPapas";
             this.buttonPapas.Size = new System.Drawing.Size(66, 20);
             this.buttonPapas.TabIndex = 1;
@@ -207,7 +223,7 @@ namespace PizzaHatApp
             // buttonBebida
             // 
             this.buttonBebida.AutoSize = true;
-            this.buttonBebida.Location = new System.Drawing.Point(7, 20);
+            this.buttonBebida.Location = new System.Drawing.Point(7, 44);
             this.buttonBebida.Name = "buttonBebida";
             this.buttonBebida.Size = new System.Drawing.Size(70, 20);
             this.buttonBebida.TabIndex = 0;
@@ -221,7 +237,7 @@ namespace PizzaHatApp
             this.button1.Location = new System.Drawing.Point(527, 245);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 32);
-            this.button1.TabIndex = 7;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -264,7 +280,7 @@ namespace PizzaHatApp
             this.buttonCalcular2.Location = new System.Drawing.Point(396, 334);
             this.buttonCalcular2.Name = "buttonCalcular2";
             this.buttonCalcular2.Size = new System.Drawing.Size(77, 32);
-            this.buttonCalcular2.TabIndex = 14;
+            this.buttonCalcular2.TabIndex = 6;
             this.buttonCalcular2.Text = "Calcular";
             this.buttonCalcular2.UseVisualStyleBackColor = true;
             this.buttonCalcular2.Click += new System.EventHandler(this.buttonCalcular2_Click);
@@ -275,7 +291,7 @@ namespace PizzaHatApp
             this.ListaPedidos.Location = new System.Drawing.Point(127, 245);
             this.ListaPedidos.Name = "ListaPedidos";
             this.ListaPedidos.Size = new System.Drawing.Size(247, 121);
-            this.ListaPedidos.TabIndex = 15;
+            this.ListaPedidos.TabIndex = 5;
             // 
             // button2
             // 
@@ -344,5 +360,6 @@ namespace PizzaHatApp
         private Button buttonCalcular2;
         private ListBox ListaPedidos;
         private Button button2;
+        private RadioButton radioButtonNull;
     }
 }

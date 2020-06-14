@@ -13,7 +13,6 @@ namespace PizzaHatApp
 {
     public partial class Caja : Form
     {
-
         List<int> listaTotal = new List<int>();
         public Caja()
         {
@@ -61,7 +60,7 @@ namespace PizzaHatApp
                 tipoTamaño = "XL ";
                 Total += 12000;
             }
-            
+
             if(buttonBebida.Checked == true)
             {
                 tipoAgregado += "+ Bebida ";
@@ -111,8 +110,14 @@ namespace PizzaHatApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ListaPedidos.Items.Clear();
-            listaTotal.Clear();
+            DialogResult dialogResult = MessageBox.Show(
+                "Desea eliminar todos los pedidos?", "Precaucion",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(dialogResult == DialogResult.Yes)
+            {
+                ListaPedidos.Items.Clear();
+                listaTotal.Clear();
+            }
         }
     }
 }

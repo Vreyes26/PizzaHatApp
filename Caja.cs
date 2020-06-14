@@ -78,6 +78,7 @@ namespace PizzaHatApp
             ListaPedidos.Items.Add(tipoPizza + tipoTamaño + tipoAgregado + "$"+Total);
 
             listaTotal.Add(Total);
+            
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)

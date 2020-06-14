@@ -240,21 +240,21 @@ namespace PizzaHatApp
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotal.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelTotal.Location = new System.Drawing.Point(479, 342);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(42, 16);
+            this.labelTotal.Size = new System.Drawing.Size(48, 16);
             this.labelTotal.TabIndex = 12;
             this.labelTotal.Text = "Total:";
             // 
             // labelTotalPedido
             // 
             this.labelTotalPedido.AutoSize = true;
-            this.labelTotalPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotalPedido.Location = new System.Drawing.Point(527, 342);
             this.labelTotalPedido.Name = "labelTotalPedido";
-            this.labelTotalPedido.Size = new System.Drawing.Size(15, 16);
+            this.labelTotalPedido.Size = new System.Drawing.Size(16, 16);
             this.labelTotalPedido.TabIndex = 13;
             this.labelTotalPedido.Text = "0";
             // 

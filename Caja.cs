@@ -83,7 +83,6 @@ namespace PizzaHatApp
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
-            //meter en un for para eliminar de uno en uno
             var count = listaTotal.Count();
             for (int i = 0; i < count; i++)
             {
@@ -99,12 +98,10 @@ namespace PizzaHatApp
 
         private void buttonCalcular2_Click(object sender, EventArgs e)
         {
-            //labelTotalPedido.Text = ListaPedidos.CheckedItems.ToString();
             int[] arrayTotal = listaTotal.ToArray();
             int totalCuentaP = arrayTotal.Sum();
             string conv = String.Format("{0:c0}", totalCuentaP);
             labelTotalPedido.Text = conv;
-            //labelTotalPedido.Text = totalCuentaP.ToString();
         }
 
         private void Caja_FormClosed(object sender, FormClosedEventArgs e)

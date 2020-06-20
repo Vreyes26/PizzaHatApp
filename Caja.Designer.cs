@@ -55,6 +55,7 @@ namespace PizzaHatApp
             this.buttonPA = new System.Windows.Forms.RadioButton();
             this.buttonPapas = new System.Windows.Forms.RadioButton();
             this.buttonBebida = new System.Windows.Forms.RadioButton();
+            this.buttonSaveOrden = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -206,7 +207,7 @@ namespace PizzaHatApp
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelTotal.Location = new System.Drawing.Point(479, 342);
+            this.labelTotal.Location = new System.Drawing.Point(479, 299);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(48, 16);
             this.labelTotal.TabIndex = 12;
@@ -216,7 +217,7 @@ namespace PizzaHatApp
             // 
             this.labelTotalPedido.AutoSize = true;
             this.labelTotalPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalPedido.Location = new System.Drawing.Point(527, 342);
+            this.labelTotalPedido.Location = new System.Drawing.Point(527, 299);
             this.labelTotalPedido.Name = "labelTotalPedido";
             this.labelTotalPedido.Size = new System.Drawing.Size(16, 16);
             this.labelTotalPedido.TabIndex = 13;
@@ -226,7 +227,7 @@ namespace PizzaHatApp
             // 
             this.buttonCalcular2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCalcular2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCalcular2.Location = new System.Drawing.Point(396, 334);
+            this.buttonCalcular2.Location = new System.Drawing.Point(396, 291);
             this.buttonCalcular2.Name = "buttonCalcular2";
             this.buttonCalcular2.Size = new System.Drawing.Size(77, 32);
             this.buttonCalcular2.TabIndex = 6;
@@ -315,12 +316,23 @@ namespace PizzaHatApp
             this.buttonBebida.Text = "Bebida";
             this.buttonBebida.UseVisualStyleBackColor = true;
             // 
+            // buttonSaveOrden
+            // 
+            this.buttonSaveOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveOrden.Location = new System.Drawing.Point(396, 337);
+            this.buttonSaveOrden.Name = "buttonSaveOrden";
+            this.buttonSaveOrden.Size = new System.Drawing.Size(119, 29);
+            this.buttonSaveOrden.TabIndex = 17;
+            this.buttonSaveOrden.Text = "Guardar orden";
+            this.buttonSaveOrden.UseVisualStyleBackColor = true;
+            // 
             // Caja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonSaveOrden);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.ListaPedidos);
             this.Controls.Add(this.buttonCalcular2);
@@ -371,5 +383,6 @@ namespace PizzaHatApp
         private ListBox ListaPedidos;
         private Button button2;
         private RadioButton radioButtonNull;
+        private Button buttonSaveOrden;
     }
 }

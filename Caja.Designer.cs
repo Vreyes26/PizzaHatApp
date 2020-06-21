@@ -47,7 +47,6 @@ namespace PizzaHatApp
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.labelTotal = new System.Windows.Forms.Label();
             this.labelTotalPedido = new System.Windows.Forms.Label();
-            this.buttonCalcular2 = new System.Windows.Forms.Button();
             this.ListaPedidos = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -56,6 +55,8 @@ namespace PizzaHatApp
             this.buttonPapas = new System.Windows.Forms.RadioButton();
             this.buttonBebida = new System.Windows.Forms.RadioButton();
             this.buttonSaveOrden = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -182,7 +183,7 @@ namespace PizzaHatApp
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(396, 245);
+            this.button1.Location = new System.Drawing.Point(380, 334);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 32);
             this.button1.TabIndex = 4;
@@ -207,7 +208,7 @@ namespace PizzaHatApp
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotal.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelTotal.Location = new System.Drawing.Point(479, 299);
+            this.labelTotal.Location = new System.Drawing.Point(380, 245);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(48, 16);
             this.labelTotal.TabIndex = 12;
@@ -217,23 +218,11 @@ namespace PizzaHatApp
             // 
             this.labelTotalPedido.AutoSize = true;
             this.labelTotalPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalPedido.Location = new System.Drawing.Point(527, 299);
+            this.labelTotalPedido.Location = new System.Drawing.Point(431, 245);
             this.labelTotalPedido.Name = "labelTotalPedido";
             this.labelTotalPedido.Size = new System.Drawing.Size(16, 16);
             this.labelTotalPedido.TabIndex = 13;
             this.labelTotalPedido.Text = "0";
-            // 
-            // buttonCalcular2
-            // 
-            this.buttonCalcular2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCalcular2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCalcular2.Location = new System.Drawing.Point(396, 291);
-            this.buttonCalcular2.Name = "buttonCalcular2";
-            this.buttonCalcular2.Size = new System.Drawing.Size(77, 32);
-            this.buttonCalcular2.TabIndex = 6;
-            this.buttonCalcular2.Text = "Calcular";
-            this.buttonCalcular2.UseVisualStyleBackColor = true;
-            this.buttonCalcular2.Click += new System.EventHandler(this.buttonCalcular2_Click);
             // 
             // ListaPedidos
             // 
@@ -248,7 +237,7 @@ namespace PizzaHatApp
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(263, 377);
+            this.button2.Location = new System.Drawing.Point(209, 377);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(111, 32);
             this.button2.TabIndex = 16;
@@ -319,12 +308,21 @@ namespace PizzaHatApp
             // buttonSaveOrden
             // 
             this.buttonSaveOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSaveOrden.Location = new System.Drawing.Point(396, 337);
+            this.buttonSaveOrden.Location = new System.Drawing.Point(611, 377);
             this.buttonSaveOrden.Name = "buttonSaveOrden";
-            this.buttonSaveOrden.Size = new System.Drawing.Size(119, 29);
+            this.buttonSaveOrden.Size = new System.Drawing.Size(124, 32);
             this.buttonSaveOrden.TabIndex = 17;
             this.buttonSaveOrden.Text = "Guardar orden";
             this.buttonSaveOrden.UseVisualStyleBackColor = true;
+            this.buttonSaveOrden.Click += new System.EventHandler(this.buttonSaveOrden_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "OrdenPizza";
             // 
             // Caja
             // 
@@ -335,7 +333,6 @@ namespace PizzaHatApp
             this.Controls.Add(this.buttonSaveOrden);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.ListaPedidos);
-            this.Controls.Add(this.buttonCalcular2);
             this.Controls.Add(this.labelTotalPedido);
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.buttonEliminar);
@@ -379,10 +376,11 @@ namespace PizzaHatApp
         private Button buttonEliminar;
         private Label labelTotal;
         private Label labelTotalPedido;
-        private Button buttonCalcular2;
         private ListBox ListaPedidos;
         private Button button2;
         private RadioButton radioButtonNull;
         private Button buttonSaveOrden;
+        private OpenFileDialog openFileDialog1;
+        private SaveFileDialog saveFileDialog1;
     }
 }

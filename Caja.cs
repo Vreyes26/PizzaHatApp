@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,7 +79,10 @@ namespace PizzaHatApp
             ListaPedidos.Items.Add(tipoPizza + tipoTamaño + tipoAgregado + "$"+Total);
 
             listaTotal.Add(Total);
-            
+            int[] arrayTotal = listaTotal.ToArray();
+            int totalCuentaP = arrayTotal.Sum();
+            string conv = String.Format("{0:c0}", totalCuentaP);
+            labelTotalPedido.Text = conv;
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)
@@ -98,10 +102,7 @@ namespace PizzaHatApp
 
         private void buttonCalcular2_Click(object sender, EventArgs e)
         {
-            int[] arrayTotal = listaTotal.ToArray();
-            int totalCuentaP = arrayTotal.Sum();
-            string conv = String.Format("{0:c0}", totalCuentaP);
-            labelTotalPedido.Text = conv;
+            
         }
 
         private void Caja_FormClosed(object sender, FormClosedEventArgs e)
@@ -119,6 +120,27 @@ namespace PizzaHatApp
                 ListaPedidos.Items.Clear();
                 listaTotal.Clear();
             }
+        }
+
+        private void buttonSaveOrden_Click(object sender, EventArgs e)
+        {
+            int[] arrayTotal = listaTotal.ToArray();
+            int totalCuentaP = arrayTotal.Sum();
+            string totalOrden = String.Format("{0:c0}", totalCuentaP);
+
+            string nameArchivo = "ordenSave.txt";
+            saveFileDialog1.FileName = nameArchivo;
+            saveFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            ListaPedidos.Items.Add("Total: "+totalOrden);
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter sw = new StreamWriter(saveFileDialog1.FileName))
+                    foreach (var item in ListaPedidos.Items)
+                    { sw.WriteLine(item.ToString()); };
+            }
+            MessageBox.Show("Orden guardada con exito!");
+            ListaPedidos.Items.Clear();
+            listaTotal.Clear();
         }
     }
 }

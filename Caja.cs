@@ -20,7 +20,7 @@ namespace PizzaHatApp
             InitializeComponent();
         }
         
-
+        //AGREGAR PEDIDO
         private void button1_Click(object sender, EventArgs e)
         {
             int Total = 0;
@@ -28,7 +28,7 @@ namespace PizzaHatApp
             string tipoTamaño = "";
             string tipoAgregado = "";
             
-
+            //SELECCION PIZZA
             if (buttonItaliana.Checked == true)
             {
                 tipoPizza = "Italiana ";
@@ -44,6 +44,7 @@ namespace PizzaHatApp
                 Total += 650;
             }
 
+            //TAMAÑO PIZZA
             if (buttonIndividual.Checked == true)
             {
                 tipoTamaño = "Individual ";
@@ -62,6 +63,7 @@ namespace PizzaHatApp
                 Total += 12000;
             }
 
+            //AGREGADO
             if(buttonBebida.Checked == true)
             {
                 tipoAgregado += "+ Bebida ";
@@ -76,15 +78,30 @@ namespace PizzaHatApp
                 Total += 1000;
             }
 
+            //AGREGAR PRODUCTOS
             ListaPedidos.Items.Add(tipoPizza + tipoTamaño + tipoAgregado + "$"+Total);
 
+            //PRECIO TOTAL
             listaTotal.Add(Total);
+
+            //FORMATO DEL PRECIO TOTAL
+            /*int[] arrayTotal = listaTotal.ToArray();
+            int totalCuentaP = arrayTotal.Sum();
+            string conv = String.Format("{0:c0}", totalCuentaP);
+            labelTotalPedido.Text = conv;*/
+            actualizarPrecio();
+        }
+
+        //ACTUALIZAR PRECIO TOTAL
+        private void actualizarPrecio()
+        {
             int[] arrayTotal = listaTotal.ToArray();
             int totalCuentaP = arrayTotal.Sum();
             string conv = String.Format("{0:c0}", totalCuentaP);
             labelTotalPedido.Text = conv;
         }
 
+        //ELIMINAR UN PEDIDO
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
             var count = listaTotal.Count();
@@ -97,12 +114,7 @@ namespace PizzaHatApp
                     Console.WriteLine(i);
                 }
             }
-            
-        }
-
-        private void buttonCalcular2_Click(object sender, EventArgs e)
-        {
-            
+            actualizarPrecio();
         }
 
         private void Caja_FormClosed(object sender, FormClosedEventArgs e)
@@ -110,6 +122,7 @@ namespace PizzaHatApp
             Application.Exit();
         }
 
+        //ELIMINAR TODOS LOS PEDIDOS
         private void button2_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show(
@@ -122,6 +135,7 @@ namespace PizzaHatApp
             }
         }
 
+        //GUARDAR ORDEN
         private void buttonSaveOrden_Click(object sender, EventArgs e)
         {
             int[] arrayTotal = listaTotal.ToArray();
@@ -137,8 +151,13 @@ namespace PizzaHatApp
                 using (StreamWriter sw = new StreamWriter(saveFileDialog1.FileName))
                     foreach (var item in ListaPedidos.Items)
                     { sw.WriteLine(item.ToString()); };
+                MessageBox.Show("Orden guardada con exito!");
             }
-            MessageBox.Show("Orden guardada con exito!");
+            else
+            {
+                MessageBox.Show("Orden no guardada");
+            }
+            
             ListaPedidos.Items.Clear();
             listaTotal.Clear();
         }
